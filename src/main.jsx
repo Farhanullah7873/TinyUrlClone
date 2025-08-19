@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { Plans } from "./pages/Plans.jsx";
 import { Blogs } from "./pages/Blogs.jsx";
 import { LinkManagement } from "./pages/LinkManagement.jsx";
-import { BrandednCustomizedLinks } from "./pages/Branded.jsx";
+import { Branded } from "./pages/Branded.jsx";
 import { BrowserRouter, Routes, Route } from "react-router";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")).render(
       <Route path="Plans/" element={<Plans />}></Route>
       <Route path="Blogs/" element={<Blogs />}></Route>
       <Route path="LinkManagement/" element={<LinkManagement />}></Route>
-        <Route path="Branded/" element={<BrandednCustomizedLinks />}></Route>
+        <Route path="Branded/" element={<Branded />}></Route>
     </Routes>
   </BrowserRouter>
 );
