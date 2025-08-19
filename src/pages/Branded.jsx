@@ -3,7 +3,7 @@ import Header from '../component/Header'
 
 import { HomeBody } from '../component/HomeBody';
 
-export const Branded = () => {
+export default  Branded = () => {
   return(
     <div><Header/>
   <HomeBody/>
