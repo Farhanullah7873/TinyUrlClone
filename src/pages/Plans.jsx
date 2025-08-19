@@ -2,8 +2,9 @@ import React from "react";
 
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import SignUpDrawer from "./Drawer/SignUpDrawer";
 
-import SignUpDrawer from "../component/Drawer/SignUpDrawer";
+
 import Header from "../component/Header";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
