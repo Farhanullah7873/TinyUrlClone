@@ -4,7 +4,7 @@ import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 import SignUpDrawer from "../component/Drawer/SignUpDrawer";
-import Header from "../component/header";
+import Header from "../component/Header";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChartLine } from "react-icons/fa6";
@@ -13,11 +13,11 @@ import { FaLinkSlash } from "react-icons/fa6";
 import { FaSquareShareNodes } from "react-icons/fa6";
 
 export const Plans = () => {
-    const openSignUpDrawer = () => {
-      setSignUp(true);
-    } 
-    
-       const [openSignUp, setSignUp] = useState(false);
+  const openSignUpDrawer = () => {
+    setSignUp(true);
+  };
+
+  const [openSignUp, setSignUp] = useState(false);
   const [enabled, setEnabled] = useState(false);
   return (
     <div>
@@ -49,8 +49,7 @@ export const Plans = () => {
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-2 gap-2">
               <div class=" p-1 border border-gray-200   ">
-                                  <h2 className="text-3xl">Pro
-</h2>
+                <h2 className="text-3xl">Pro</h2>
                 <h2 className="text-3xl">$9.99 / mo</h2>
                 <input
                   type="range"
@@ -77,18 +76,22 @@ export const Plans = () => {
                       </ul>
                     </p>
                   </div>
-                  <div class="px-6 pt-14
-                   pb-1">
-                    <button onClick={openSignUpDrawer} class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded">
+                  <div
+                    class="px-6 pt-14
+                   pb-1"
+                  >
+                    <button
+                      onClick={openSignUpDrawer}
+                      class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded"
+                    >
                       Sign up
                     </button>
                   </div>
                 </div>
               </div>
               <div class=" p-4 border border-gray-200  ">
-                  <h2 className="text-3xl">Bulk 100K
-</h2>
-                    <h2 className="text-3xl">$9.99 / mo</h2>
+                <h2 className="text-3xl">Bulk 100K</h2>
+                <h2 className="text-3xl">$9.99 / mo</h2>
                 <input
                   type="range"
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
@@ -97,7 +100,6 @@ export const Plans = () => {
                 <div class="max-w-sm rounded overflow-hidden shadow-lg">
                   <div class="px-6 py-4">
                     <div class=" text-[14px] text-center mb-2">
-                      
                       <p>500 Links with Unlimited Trackable Clicks</p>
                     </div>
                     <ul className="list-disc ps-2 text-[13px]">
@@ -112,15 +114,18 @@ export const Plans = () => {
                     </ul>
                   </div>
                   <div class="px-6 pt-13 pb-2">
-                      <button onClick={openSignUpDrawer}  class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded">
-                       Sign up
+                    <button
+                      onClick={openSignUpDrawer}
+                      class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded"
+                    >
+                      Sign up
                     </button>
                   </div>
                 </div>
               </div>
               <div class=" border border-gray-200   p-4">
                 <h2 className="text-3xl">Pro</h2>
-                    <h2 className="text-3xl">$9.99 / mo</h2>
+                <h2 className="text-3xl">$9.99 / mo</h2>
                 <input
                   type="range"
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
@@ -143,22 +148,20 @@ export const Plans = () => {
                     </ul>
                   </div>
                   <div class="px-6 pt-13 pb-2">
-                      <button onClick={openSignUpDrawer}  class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded">
-                Sign up
+                    <button
+                      onClick={openSignUpDrawer}
+                      class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded"
+                    >
+                      Sign up
                     </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-           <SignUpDrawer
-                      open={openSignUp}
-                      setOpen={setSignUp}
-                     
-                    />
+          <SignUpDrawer open={openSignUp} setOpen={setSignUp} />
         </div>
       </>
-      
     </div>
   );
 };
