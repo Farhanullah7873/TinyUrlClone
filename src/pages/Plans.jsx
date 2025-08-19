@@ -6,7 +6,7 @@ import SignUpDrawer from "../component/Drawer/SignUpDrawer";
 
 
 
-import Header from "..component/Header";
+import Header from "../component/Header";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChartLine } from "react-icons/fa6";
