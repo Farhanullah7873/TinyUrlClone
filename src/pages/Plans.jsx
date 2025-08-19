@@ -2,8 +2,8 @@ import React from "react";
 
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
-import SignUpDrawer from "../Drawer/SignUpDrawer.jsx";
 
+import SignUpDrawer from "../component/Drawer/SignUpDrawer.jsx";
 
 
 import Header from "../component/Header";
