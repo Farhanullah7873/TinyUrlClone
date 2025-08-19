@@ -1,8 +1,8 @@
 import React from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import SignUpDrawer from "./Drawer/SignUpDrawer.jsx";
 
-import SignUpDrawer from "../Drawer/SignUpDrawer.jsx";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChartLine } from "react-icons/fa6";
