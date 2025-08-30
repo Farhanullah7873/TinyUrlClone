@@ -26,8 +26,7 @@ import {
   DialogTitle,
   TransitionChild,
 } from "@headlessui/react";
-// import { XMarkIcon } from '@heroicons/react/24/outline'
-// import { HomeBody } from "./bodyComponent/homeBody.jsx";
+
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 function Header() {
   const navigate = useNavigate();
