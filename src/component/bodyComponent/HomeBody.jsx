@@ -2,7 +2,7 @@ import React from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
-import SignUpDrawer from "../Drawer/SignUpDrawer.JSX";
+import SignUpDrawer from "../Drawer/SignUpDrawer.jsx";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChartLine } from "react-icons/fa6";
@@ -21,7 +21,7 @@ export const HomeBody = () => {
 
   return (
     <>
-      {/* <div>
+      <div>
         <div className="bg-gradient-to-b     flex flex-colum from-[rgb(2,61,92)] via-[rgb(26,97,135)] to-[rgb(66,167,222)]  gap-5 flex-wrap z-0   bg-[rgb(72,191,255)] h-full  pt-19 bg-fixed">
           <div className="form ">
             <form className=" bg-white w-100 h-80 ms-4 p-4 mt-9 rounded-2xl">
@@ -153,7 +153,7 @@ export const HomeBody = () => {
         </div>
 
         <SignUpDrawer open={openSignUp} setOpen={setSignUp} />
-      </div> */}
+      </div>
     </>
   );
 };
