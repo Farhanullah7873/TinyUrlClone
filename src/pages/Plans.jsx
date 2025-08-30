@@ -3,10 +3,8 @@ import React from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
-import SignUpDrawer from "../component/Drawer/SignUpDrawer.jsx";
-
-
-import Header from "../component/Header";
+import SignUpDrawer from "../component/Drawer/SignUpDrawer";
+import Header from "../component/header";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChartLine } from "react-icons/fa6";
@@ -15,11 +13,11 @@ import { FaLinkSlash } from "react-icons/fa6";
 import { FaSquareShareNodes } from "react-icons/fa6";
 
 export const Plans = () => {
-  const openSignUpDrawer = () => {
-    setSignUp(true);
-  };
-
-  const [openSignUp, setSignUp] = useState(false);
+    const openSignUpDrawer = () => {
+      setSignUp(true);
+    } 
+    
+       const [openSignUp, setSignUp] = useState(false);
   const [enabled, setEnabled] = useState(false);
   return (
     <div>
@@ -49,23 +47,25 @@ export const Plans = () => {
               <p className="text-black">Annual</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-2 gap-2">
-              <div class=" p-1 border border-gray-200   ">
-                <h2 className="text-3xl">Pro</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-2 gap-2">
+              <div className=" p-1 border border-gray-200   ">
+                                  <h2 className="text-3xl">Pro
+</h2>
                 <h2 className="text-3xl">$9.99 / mo</h2>
                 <input
                   type="range"
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                 />
 
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <div class="px-6 py-4">
-                    <div class=" text-[14px] text-center mb-2">
+                <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                  <div className="px-6 py-4">
+                    <div className=" text-[14px] text-center mb-2">
                       <p>500 Links with Unlimited Trackable Clicks</p>
                     </div>
-                    <p class="text-gray-700 text-[13px]">
+                    <p className="text-gray-700 text-[13px]">
                       Get full access to our Pro features including: Link
                       Analytics
+                      </p>
                       <ul className="list-disc ps-2">
                         <li> Advanced Link Management Shorten URLs Using</li>
                         <li>
@@ -76,32 +76,29 @@ export const Plans = () => {
                           and
                         </li>
                       </ul>
-                    </p>
+                    
                   </div>
-                  <div
-                    class="px-6 pt-14
-                   pb-1"
-                  >
-                    <button
-                      onClick={openSignUpDrawer}
-                      class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded"
-                    >
+                  <div className="px-6 pt-14
+                   pb-1">
+                    <button onClick={openSignUpDrawer} className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded">
                       Sign up
                     </button>
                   </div>
                 </div>
               </div>
-              <div class=" p-4 border border-gray-200  ">
-                <h2 className="text-3xl">Bulk 100K</h2>
-                <h2 className="text-3xl">$9.99 / mo</h2>
+              <div className=" p-4 border border-gray-200  ">
+                  <h2 className="text-3xl">Bulk 100K
+</h2>
+                    <h2 className="text-3xl">$9.99 / mo</h2>
                 <input
                   type="range"
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                 />
 
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <div class="px-6 py-4">
-                    <div class=" text-[14px] text-center mb-2">
+                <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                  <div className="px-6 py-4">
+                    <div className=" text-[14px] text-center mb-2">
+                      
                       <p>500 Links with Unlimited Trackable Clicks</p>
                     </div>
                     <ul className="list-disc ps-2 text-[13px]">
@@ -115,27 +112,24 @@ export const Plans = () => {
                       </li>
                     </ul>
                   </div>
-                  <div class="px-6 pt-13 pb-2">
-                    <button
-                      onClick={openSignUpDrawer}
-                      class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded"
-                    >
-                      Sign up
+                  <div className="px-6 pt-13 pb-2">
+                      <button onClick={openSignUpDrawer}  className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded">
+                       Sign up
                     </button>
                   </div>
                 </div>
               </div>
-              <div class=" border border-gray-200   p-4">
+              <div className=" border border-gray-200   p-4">
                 <h2 className="text-3xl">Pro</h2>
-                <h2 className="text-3xl">$9.99 / mo</h2>
+                    <h2 className="text-3xl">$9.99 / mo</h2>
                 <input
                   type="range"
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                 />
 
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                  <div class="px-6 py-4">
-                    <div class=" text-[14px] text-center mb-2">
+                <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                  <div className="px-6 py-4">
+                    <div className=" text-[14px] text-center mb-2">
                       <p>500 Links with Unlimited Trackable Clicks</p>
                     </div>
                     <ul className="list-disc ps-2 text-[13px]">
@@ -149,21 +143,23 @@ export const Plans = () => {
                       </li>
                     </ul>
                   </div>
-                  <div class="px-6 pt-13 pb-2">
-                    <button
-                      onClick={openSignUpDrawer}
-                      class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded"
-                    >
-                      Sign up
+                  <div className="px-6 pt-13 pb-2">
+                      <button onClick={openSignUpDrawer}  className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 w-60 text-center px-4 rounded">
+                Sign up
                     </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <SignUpDrawer open={openSignUp} setOpen={setSignUp} />
+           <SignUpDrawer
+                      open={openSignUp}
+                      setOpen={setSignUp}
+                     
+                    />
         </div>
       </>
+      
     </div>
   );
 };

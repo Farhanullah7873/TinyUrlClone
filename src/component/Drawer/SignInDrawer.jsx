@@ -20,12 +20,12 @@ import { useState } from "react";
 export default function SignInDrawer({ open, setOpen,  setSignUpOpen }) {
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState("");
-    // if (!open) return null;
+
 
  function openDrawer1() {
    setSignUpOpen(true)
     setOpen(false); 
-    // open(false)
+    
      
 }
 

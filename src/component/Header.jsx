@@ -3,7 +3,7 @@ import { FaQuestion } from "react-icons/fa6";
 import { VscTriangleDown } from "react-icons/vsc";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
-import SignUpDrawer from "./Drawer/SignUpDrawer.jsx";
+import SignUpDrawer from "./Drawer/SignUpDrawer.JSX";
 import { Myurl } from "./Drawer/Myurl";
 import { useNavigate } from "react-router";
 
@@ -26,8 +26,8 @@ import {
   DialogTitle,
   TransitionChild,
 } from "@headlessui/react";
-
-
+// import { XMarkIcon } from '@heroicons/react/24/outline'
+import { HomeBody } from "./bodyComponent/homeBody.jsx";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 function Header() {
   const navigate = useNavigate();
@@ -122,9 +122,7 @@ function Header() {
               </div>
               <div className="flex w-20 flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex shrink-0 w-10 items-center text-white font-bold text-2xl">
-                  <button onClick={HomePage} href="">
-                    TINYURL
-                  </button>
+                  <p onClick={HomePage}>TINYURL</p>
                 </div>
               </div>
 
@@ -142,7 +140,7 @@ function Header() {
                   )}
                 </div>
               </div>
-              <div className="hidden sm:ml-12  h-10 font-bold roundedfull text-2xl  sm:block">
+              <div className="hidden sm:ml-12  h-10 font-bold  text-2xl  sm:block">
                 <div className="flex space-x-4 w-full h-10 color-white bg-[#087da8]">
                   {navigation.map((item) => {
                     if (item.children) {

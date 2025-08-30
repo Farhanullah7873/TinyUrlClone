@@ -20,7 +20,7 @@ import SigninDrawer from "./SignInDrawer";
 
 
 export default function SignUpDrawer({ open, setOpen,setSignInOpen}) {
-    // if (!open) return null;
+ 
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState("");
   const [openSignUp, setSignUp] = useState(false);

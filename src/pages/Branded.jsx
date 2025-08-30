@@ -1,13 +1,8 @@
 import React from 'react'
-import Header from '../component/Header'
-
-import { HomeBody } from '../component/HomeBody';
-
-export default  Branded = () => {
+import Header from '../component/header'
+export const BrandednCustomizedLinks = () => {
   return(
-    <div><Header/>
-  <HomeBody/>
-    </div>
+    <div><Header/></div>
     
   )
 }
