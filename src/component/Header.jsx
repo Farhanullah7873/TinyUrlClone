@@ -3,7 +3,7 @@ import { FaQuestion } from "react-icons/fa6";
 import { VscTriangleDown } from "react-icons/vsc";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
-import SignUpDrawer from "./Drawer/SignUpDrawer.JSX";
+import SignUpDrawer from "./Drawer/SignUpDrawer.jsx";
 import { Myurl } from "./Drawer/Myurl";
 import { useNavigate } from "react-router";
 
