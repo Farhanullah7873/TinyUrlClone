@@ -6,7 +6,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import Header from './component/Header.jsx'
-import  HomeBody  from '../component/bodyComponent/HomeBody.jsx'
+import { HomeBody } from './component/bodyComponent/HomeBody.jsx'
 function App() {
 return(
  <>
