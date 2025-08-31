@@ -21,12 +21,8 @@ export const HomeBody = () => {
     Navigate("/Plans");
   };
 
-
-
-
-  // Forms Handle 
-const[shortLink,fetchShortLink]=useState("");
-
+  // Forms Handle
+  const [shortLink, fetchShortLink] = useState("");
 
   function handleInput(e) {
     setLink(e.target.value);
@@ -35,10 +31,10 @@ const[shortLink,fetchShortLink]=useState("");
   const handleForm = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5050/url/save", {
+      const res = await axios.post("http://tinyurlbackend-production.up.railway.app/url/save", {
         longUrl: link,
       });
-   fetchShortLink(res.data.shortURL)
+      fetchShortLink(res.data.shortURL);
     } catch (error) {
       console.log(error);
     }
@@ -47,10 +43,9 @@ const[shortLink,fetchShortLink]=useState("");
   return (
     <>
       <div>
-       
         <div className="bg-gradient-to-b     flex flex-colum from-[rgb(2,61,92)] via-[rgb(26,97,135)] to-[rgb(66,167,222)]  gap-5 flex-wrap z-0   bg-[rgb(72,191,255)] h-full  pt-19 bg-fixed">
           <div className="form ">
-             {/* <p>{fetchdata}</p> */}
+            {/* <p>{fetchdata}</p> */}
             <form
               onSubmit={handleForm}
               className=" bg-white w-120 h-80 ms-4 p-4 mt-9 rounded-2xl"
@@ -101,11 +96,13 @@ const[shortLink,fetchShortLink]=useState("");
                       Customize your link
                     </label>
                     <div className="mt-2 grid grid-cols-1">
-           
-                      <a className="border w-100" href={shortLink} target="_blank">{shortLink}
-</a>
-
-               
+                      <a
+                        className="border w-100"
+                        href={shortLink}
+                        target="_blank"
+                      >
+                        {shortLink}
+                      </a>
                     </div>
                   </div>
                 </div>
