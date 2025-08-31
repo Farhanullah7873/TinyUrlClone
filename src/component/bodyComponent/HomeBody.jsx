@@ -45,10 +45,10 @@ export const HomeBody = () => {
       <div>
         <div className="bg-gradient-to-b     flex flex-colum from-[rgb(2,61,92)] via-[rgb(26,97,135)] to-[rgb(66,167,222)]  gap-5 flex-wrap z-0   bg-[rgb(72,191,255)] h-full  pt-19 bg-fixed">
           <div className="form ">
-            {/* <p>{fetchdata}</p> */}
+         
             <form
               onSubmit={handleForm}
-              className=" bg-white w-120 h-80 ms-4 p-4 mt-9 rounded-2xl"
+              className=" bg-white w-100 h-80 ms-4 p-4 mt-9 rounded-2xl"
             >
               <p className="flex items-center mt-9 ms-4">
                 <svg
@@ -97,7 +97,7 @@ export const HomeBody = () => {
                     </label>
                     <div className="mt-2 grid grid-cols-1">
                       <a 
-                        className="border w-100 overflow-hidden"
+                        className="border w-80 overflow-hidden"
                         href={shortLink}
                         target="_blank"
                       >
