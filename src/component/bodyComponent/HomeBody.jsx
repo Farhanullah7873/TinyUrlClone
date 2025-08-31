@@ -96,8 +96,8 @@ export const HomeBody = () => {
                       Customize your link
                     </label>
                     <div className="mt-2 grid grid-cols-1">
-                      <a
-                        className="border w-100"
+                      <a 
+                        className="border w-100 overflow-hidden"
                         href={shortLink}
                         target="_blank"
                       >
