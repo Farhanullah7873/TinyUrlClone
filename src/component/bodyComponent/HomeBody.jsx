@@ -1,7 +1,8 @@
 import React from "react";
-import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
-import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
+import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import axios from "axios";
+import { useEffect } from "react";
 import SignUpDrawer from "../Drawer/SignUpDrawer.jsx";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +11,7 @@ import { FaGlobe } from "react-icons/fa";
 import { FaLinkSlash } from "react-icons/fa6";
 import { FaSquareShareNodes } from "react-icons/fa6";
 export const HomeBody = () => {
+  const [link, setLink] = useState("{}");
   const Navigate = useNavigate();
   const [openSignUp, setSignUp] = useState(false);
   const openSignUpDrawer = (item) => {
@@ -19,12 +21,40 @@ export const HomeBody = () => {
     Navigate("/Plans");
   };
 
+
+
+
+  // Forms Handle 
+const[shortLink,fetchShortLink]=useState("");
+
+
+  function handleInput(e) {
+    setLink(e.target.value);
+  }
+
+  const handleForm = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:5050/url/save", {
+        longUrl: link,
+      });
+   fetchShortLink(res.data.shortURL)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div>
+       
         <div className="bg-gradient-to-b     flex flex-colum from-[rgb(2,61,92)] via-[rgb(26,97,135)] to-[rgb(66,167,222)]  gap-5 flex-wrap z-0   bg-[rgb(72,191,255)] h-full  pt-19 bg-fixed">
           <div className="form ">
-            <form className=" bg-white w-100 h-80 ms-4 p-4 mt-9 rounded-2xl">
+             {/* <p>{fetchdata}</p> */}
+            <form
+              onSubmit={handleForm}
+              className=" bg-white w-120 h-80 ms-4 p-4 mt-9 rounded-2xl"
+            >
               <p className="flex items-center mt-9 ms-4">
                 <svg
                   className="fill-green-500 "
@@ -52,8 +82,9 @@ export const HomeBody = () => {
                   <div className="mt-2">
                     <input
                       id="first-name"
-                      name="first-name"
+                      name="longUrl"
                       type="text"
+                      onChange={handleInput}
                       placeholder="Enter Long Link Here"
                       autoComplete="given-name"
                       className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
@@ -70,37 +101,20 @@ export const HomeBody = () => {
                       Customize your link
                     </label>
                     <div className="mt-2 grid grid-cols-1">
-                      <select
-                        id="country"
-                        name="country"
-                        autoComplete="country-name"
-                        className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                      >
-                        <option>TinyUrl.com</option>
-                        <option> Add Domain 🔒 </option>
-                      </select>
-                      <ChevronDownIcon
-                        aria-hidden="true"
-                        className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
-                      />
-                    </div>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <div className="mt-8">
-                      <input
-                        id="region"
-                        name="region"
-                        type="text"
-                        placeholder="Enter Alias"
-                        autoComplete="address-level1"
-                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                      />
+           
+                      <a className="border w-100" href={shortLink} target="_blank">{shortLink}
+</a>
+
+               
                     </div>
                   </div>
                 </div>
               </div>
 
-              <button className="bg-green-500 hover:bg-green-700 text-white font-bold mt-5 w-80  ms-3 py-2 px-4 rounded">
+              <button
+                type="submit"
+                className="bg-green-500 hover:bg-green-700 text-white font-bold mt-5 w-80  ms-3 py-2 px-4 rounded"
+              >
                 Button
               </button>
             </form>
