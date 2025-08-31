@@ -31,9 +31,9 @@ export const HomeBody = () => {
   const handleForm = async (e) => {
     e.preventDefault();
     try {
-    const res = await axios.post("https://your-app-production.up.railway.app/url/save", {
-  longUrl: link,
-});
+      const res = await axios.post("https://tinyurlbackend-production.up.railway.app/url/save", {
+        longUrl: link,
+      });
       fetchShortLink(res.data.shortURL);
     } catch (error) {
       console.log(error);
