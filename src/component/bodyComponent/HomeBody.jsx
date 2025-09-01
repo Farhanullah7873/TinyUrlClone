@@ -112,7 +112,7 @@ export const HomeBody = () => {
                 type="submit"
                 className="bg-green-500 hover:bg-green-700 text-white font-bold mt-5 w-80  ms-3 py-2 px-4 rounded"
               >
-                Button
+                Shorten URL
               </button>
             </form>
           </div>
